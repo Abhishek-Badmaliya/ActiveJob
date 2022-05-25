@@ -1,0 +1,27 @@
+<h2 class = "text-center mt-4" >List of Users</h2><br>
+<%= link_to "Add New User", new_user_path, class:"btn btn-secondary" %><br><br>
+
+<table class = "table table-bordered">
+  <thead class = "table-light text-center">
+    <tr>
+      <th> User Name </th>
+      <th> User Email </th>
+      <th> Action </th>
+    </tr>
+  </thead>
+  <tbody class = "text-center">
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_name %></td>
+        <td><%= user.user_email %></td>
+        <div>
+          <td>
+            <div class="btn-group" role="group">
+              <%= link_to 'Show', user_path(user), class: "text-decoration-none btn btn-info" %>
+            </div>
+          </td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

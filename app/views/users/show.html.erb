@@ -1,0 +1,19 @@
+<h1 class="text-center mt-3">User Details</h1>
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-7">
+      <div class="card p-3 py-4 p-3 mb-5 bg-white">
+        <div class="text-center"> <img src="https://www.w3schools.com/bootstrap5/img_avatar3.png" width="100" class="rounded-circle"> </div>
+          <div class="text-center mt-3"> 
+            <h5 class="mt-2 mb-0"><%= @user.user_name %></h5><br> <span><%= @user.user_email %></span><br><br>
+            <div class="px-4 mt-1">
+              <%= link_to "Edit Profile", edit_user_path, class:"btn btn-secondary" %> </div><br>
+              <%= button_to 'Delete', user_path, method: :delete, data: { confirm: "Are you sure you want to delete?" }, class: "btn btn-danger" %><br>
+              <%= link_to 'Back', { controller: 'users', action: 'index'}, class: "btn btn-primary" %>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
