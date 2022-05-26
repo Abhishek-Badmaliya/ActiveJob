@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   root "pages#home"
   get '/pages', to: "pages#home"
 
-  resources :users
+  #define routes for active job basics
+  namespace :api do
+    namespace :v1 do
+      resources :users
+      get '/job_email', to: "users#job_email"
+    end
+  end
 end
