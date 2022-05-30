@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       get '/job_email', to: "users#job_email"
+      get '/job_later', to: "users#job_later"
     end
   end
 end
