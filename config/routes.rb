@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :users
       get '/job_email', to: "users#job_email"
       get '/job_later', to: "users#job_later"
+      get '/job_update', to: "users#job_update"
     end
   end
 end

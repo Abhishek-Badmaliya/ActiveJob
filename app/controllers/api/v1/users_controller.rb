@@ -6,4 +6,8 @@ class Api::V1::UsersController < ApplicationController
   def job_later
     DelayedEmailJob.perform_later
   end
+
+  def job_update
+    UpdateUserJob.perform_now
+  end
 end
